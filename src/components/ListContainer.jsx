@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { List } from "./List";
 import { TextInput } from "./TextInput";
-import { addColor } from "../state/actions";
 import { Button } from "./Button";
+import { addColor, removeColor } from "../state/actions";
 
 class ListContainer extends Component {
   state = {
@@ -25,9 +25,7 @@ class ListContainer extends Component {
   };
 
   removeItem = color => {
-    this.setState({
-      colors: this.state.colors.filter(c => c !== color)
-    });
+    this.props.removeColor(color);
   };
 
   render() {
@@ -49,7 +47,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-  addColor
+  addColor,
+  removeColor
 };
 
 const func = connect(
