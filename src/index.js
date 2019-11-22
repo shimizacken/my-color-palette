@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { ColoredTitle } from "./components/ColoredTitle";
-import { ListContainer } from "./components/ListContainer";
-import { ColorCounterContainer } from "./components/ColorCounterContainer";
+import { ColoredTitle } from "./components/common/ColoredTitle";
+import { ListContainer } from "./features/colors-list-container";
+import { ColorCounterContainer } from "./features/colored-counter";
 import { store } from "./state/store";
 import "./styles.css";
 

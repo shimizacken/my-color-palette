@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { List } from "./List";
-import { TextInput } from "./TextInput";
-import { Button } from "./Button";
-import { addColor, removeColor } from "../state/actions";
+import { List } from "../../components/common/List";
+import { TextInput } from "../../components/common/TextInput";
+import { Button } from "../../components/common/Button";
+import { addColor, removeColor } from "../../state/actions";
 
 class ListContainer extends Component {
   state = {
