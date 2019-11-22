@@ -14,7 +14,8 @@ class ListContainer extends Component {
   onClick = e => {
     this.props.addColor({
       id: uuid.v4(),
-      name: this.state.inputValue
+      name: this.state.inputValue,
+      createDate: new Date().getTime()
     });
 
     this.setState({

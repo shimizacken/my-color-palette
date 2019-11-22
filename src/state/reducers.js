@@ -2,9 +2,9 @@ import { ADD_COLOR, REMOVE_COLOR } from "./constants";
 import uuid from "uuid";
 
 const initialState = [
-  { id: uuid.v4(), name: "red" },
-  { id: uuid.v4(), name: "green" },
-  { id: uuid.v4(), name: "pink" }
+  { id: uuid.v4(), name: "red", createDate: new Date().getTime() },
+  { id: uuid.v4(), name: "green", createDate: new Date().getTime() },
+  { id: uuid.v4(), name: "pink", createDate: new Date().getTime() }
 ];
 
 export const colors = (state = initialState, action) => {
