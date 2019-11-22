@@ -5,7 +5,7 @@ export const addColor = color => ({
   color
 });
 
-export const removeColor = color => ({
+export const removeColor = colorId => ({
   type: REMOVE_COLOR,
-  color
+  colorId
 });

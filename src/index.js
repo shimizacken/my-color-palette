@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { ColoredTitle } from "./components/common/ColoredTitle";
-import { ListContainer } from "./features/colors-list-container";
+import { ListContainer } from "./features/colors-list";
 import { ColorCounterContainer } from "./features/colored-counter";
 import { store } from "./state/store";
 import "./styles.css";

@@ -1,12 +1,19 @@
 import { ADD_COLOR, REMOVE_COLOR } from "./constants";
+import uuid from "uuid";
 
-export const colors = (state = ["red", "green", "pink"], action) => {
+const initialState = [
+  { id: uuid.v4(), name: "red" },
+  { id: uuid.v4(), name: "green" },
+  { id: uuid.v4(), name: "pink" }
+];
+
+export const colors = (state = initialState, action) => {
   if (action.type === ADD_COLOR) {
     return [...state, action.color];
   }
 
   if (action.type === REMOVE_COLOR) {
-    return state.filter(c => c !== action.color);
+    return state.filter(c => c.id !== action.colorId);
   }
 
   return state;

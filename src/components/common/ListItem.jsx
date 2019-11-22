@@ -1,14 +1,14 @@
 import React from "react";
 import { Button } from "./Button";
 
-export const ListItem = ({ color, removeItem }) => {
+export const ListItem = ({ itemText, itemId, removeItem }) => {
   const click = () => {
-    removeItem(color);
+    removeItem(itemId);
   };
 
   return (
     <div>
-      {color}
+      {itemText}
       <Button text="X" onClick={click} />
     </div>
   );

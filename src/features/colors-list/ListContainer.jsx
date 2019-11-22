@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { List } from "../../components/common/List";
 import { TextInput } from "../../components/common/TextInput";
 import { Button } from "../../components/common/Button";
+import uuid from "uuid";
 import { addColor, removeColor } from "../../state/actions";
 
 class ListContainer extends Component {
@@ -11,7 +12,10 @@ class ListContainer extends Component {
   };
 
   onClick = e => {
-    this.props.addColor(this.state.inputValue);
+    this.props.addColor({
+      id: uuid.v4(),
+      name: this.state.inputValue
+    });
 
     this.setState({
       inputValue: ""
@@ -24,8 +28,8 @@ class ListContainer extends Component {
     });
   };
 
-  removeItem = color => {
-    this.props.removeColor(color);
+  removeItem = colorId => {
+    this.props.removeColor(colorId);
   };
 
   render() {
