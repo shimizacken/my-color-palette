@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        <ColoredTitle text="My Colors List" />
+        <ColoredTitle text="My Color List" />
         <ColorCounterContainer />
         <ListContainer />
       </Provider>
